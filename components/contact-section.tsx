@@ -50,7 +50,7 @@ export const ContactSection = memo(function ContactSection() {
     {
       icon: Mail,
       title: "Email Address",
-      details: ["info@klmeditech.com"],
+      details: ["klmeditechindustries@gmail.com"],
       action: () => window.open("mailto:info@klmeditech.com"),
       color: "text-blue-600 bg-blue-50",
     },

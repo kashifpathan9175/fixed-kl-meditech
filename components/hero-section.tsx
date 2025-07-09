@@ -3,6 +3,7 @@
 import { memo } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { easeInOut } from "framer-motion"
 import { ArrowRight, Play, Shield, Award } from "lucide-react"
 
 export const HeroSection = memo(function HeroSection() {
@@ -22,24 +23,24 @@ export const HeroSection = memo(function HeroSection() {
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.25, 0.46, 0.45, 0.94],
-      },
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: easeInOut, // ✅ Correct easing type
     },
-  }
+  },
+}
 
   const floatingVariants = {
     animate: {
       y: [-10, 10, -10],
       transition: {
         duration: 6,
-        repeat: Number.POSITIVE_INFINITY,
-        ease: "easeInOut",
+        repeat: Infinity,
+        ease: easeInOut,
       },
     },
   }
@@ -288,7 +289,7 @@ export const HeroSection = memo(function HeroSection() {
           {/* Stats Row */}
           <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { number: "2024", label: "Founded", color: "text-teal-600" },
+              { number: "2025", label: "Founded", color: "text-teal-600" },
               { number: "100%", label: "Quality Commitment", color: "text-blue-600" },
               { number: "24/7", label: "Customer Support", color: "text-slate-600" },
             ].map((stat, index) => (
