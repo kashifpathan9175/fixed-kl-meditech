@@ -138,7 +138,8 @@ export const ProductSection = memo(function ProductSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl text-blue-600 mb-2"
           >
-            Medical Grade • I.P. Standard • WHO-GMP Certified
+            Medical Grade • I.P. Standard • WHO-GMP Compliant • ISO 9001:2015 Compliant
+
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -190,18 +191,18 @@ export const ProductSection = memo(function ProductSection() {
                   Premium Medical Grade Cotton
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Our <strong>CottonCare Surgical Absorbent Cotton Wool Rolls</strong> are made from{" "}
+                  Our <strong>Cotton Care Absorbent Cotton Wool Rolls</strong> are made from{" "}
                   <strong>100% pure, high-quality cotton fibers</strong>, processed using{" "}
                   <strong>advanced purification techniques</strong> to ensure excellent{" "}
                   <strong>absorbency, softness, and purity</strong>. Manufactured in compliance with{" "}
                   <strong>Indian Pharmacopoeia (I.P.) standards</strong> and under{" "}
-                  <strong>WHO-GMP certified facilities</strong>, they are a trusted choice for{" "}
+                  <strong>WHO-GMP compliant facilities</strong>, they are a trusted choice for{" "}
                   <strong>medical and hygienic applications</strong>.
                   <br />
                   <br />
                   These <strong>lint-free</strong>, <strong>non-irritating</strong> cotton rolls are
                   gentle on the skin and ideal for a wide range of{" "}
-                  <strong>surgical, clinical, and personal care uses</strong>. Designed to meet the
+                  <strong>clinical, and personal care uses</strong>. Designed to meet the
                   needs of <strong>healthcare professionals</strong>, our cotton rolls are available in{" "}
                   <strong>various sizes</strong> to suit different applications.
                 </p>
@@ -212,16 +213,16 @@ export const ProductSection = memo(function ProductSection() {
                 <ul className="space-y-2">
                   <li className="flex items-center text-gray-700">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    <span>Superior absorption capacity (23x its weight)</span>
+                    <span>Superior absorption capacity (more than 23x its weight)</span>
                   </li>
                   <li className="flex items-center text-gray-700">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     <span>Lint-free and non-irritating to skin</span>
                   </li>
-                  <li className="flex items-center text-gray-700">
+                  {/* <li className="flex items-center text-gray-700">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     <span>Gamma sterilized for complete safety</span>
-                  </li>
+                  </li> */}
                   <li className="flex items-center text-gray-700">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                     <span>Individually sealed packaging</span>

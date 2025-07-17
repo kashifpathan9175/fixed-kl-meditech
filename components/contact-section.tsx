@@ -57,7 +57,7 @@ export const ContactSection = memo(function ContactSection() {
     {
       icon: MapPin,
       title: "Our Location",
-      details: ["MIDC Industrial Area", "Butibori, Nagpur, Maharashtra"],
+      details: ["A12/6 MIDC Industrial Area", "Butibori, Nagpur(441122), Maharashtra"],
       action: openGoogleMaps,
       color: "text-purple-600 bg-purple-50",
     },
@@ -136,14 +136,14 @@ export const ContactSection = memo(function ContactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
-              <Button
+              {/* <Button
                 onClick={openGoogleMaps}
                 className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 size="lg"
               >
                 <Navigation className="mr-2 w-5 h-5" />
                 Get Directions on Google Maps
-              </Button>
+              </Button> */}
             </motion.div>
           </motion.div>
 

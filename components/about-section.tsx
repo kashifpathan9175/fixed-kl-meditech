@@ -44,7 +44,7 @@ export const AboutSection = memo(function AboutSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-gray-600 mb-8 leading-relaxed"
           >
-            K&L MEDITECH INDUSTRIES LLP is a leading manufacturer of "COTTON CARE" premium surgical absorbent cotton
+            K&L MEDITECH INDUSTRIES LLP is a leading manufacturer of "COTTON CARE" premium absorbent cotton
             wool rolls. Strategically located in the MIDC Industrial Area, Butibori, Nagpur, Maharashtra, we are
             committed to delivering medical-grade products that meet stringent international standards.
           </motion.p>

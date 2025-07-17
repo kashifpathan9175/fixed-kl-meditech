@@ -7,7 +7,7 @@ import { Shield, Clock, Star } from "lucide-react"
 const reasons = [
   {
     icon: Shield,
-    title: "WHO-GMP & CDSCO Compliant",
+    title: "WHO-GMP | ISO 9001:2015 | IP GRADE",
     description: "Meeting highest national and international regulatory standards for medical devices.",
   },
   {

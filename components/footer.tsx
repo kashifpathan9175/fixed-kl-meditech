@@ -90,7 +90,7 @@ export const Footer = memo(function Footer() {
                 onClick={openGoogleMaps}
               >
                 <MapPin className="w-5 h-5 text-teal-400 mt-0.5 flex-shrink-0" />
-                <span>MIDC Industrial Area, Butibori, Nagpur, Maharashtra</span>
+                <span>A12/6 MIDC Industrial Area", "Butibori, Nagpur(441122), Maharashtra</span>
               </motion.div>
             </div>
 
