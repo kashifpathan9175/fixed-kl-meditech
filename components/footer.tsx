@@ -78,10 +78,10 @@ export const Footer = memo(function Footer() {
               <motion.div
                 className="flex items-center space-x-3 text-slate-300 hover:text-teal-400 transition-colors cursor-pointer"
                 whileHover={{ x: 5 }}
-                onClick={() => window.open("mailto:info@klmeditech.com")}
+                onClick={() => window.open("mailto:klmeditechindustries@gmail.com")}
               >
                 <Mail className="w-5 h-5 text-teal-400" />
-                <span>info@klmeditech.com</span>
+                <span>klmeditechindustries@gmail.com</span>
               </motion.div>
 
               <motion.div
@@ -204,3 +204,9 @@ export const Footer = memo(function Footer() {
   )
 })
 export default Footer
+// const socialLinks = [
+//   { icon: Facebook, href: "https://www.facebook.com/yourpage", label: "Facebook" },
+//   { icon: Twitter, href: "https://twitter.com/yourhandle", label: "Twitter" },
+//   { icon: Linkedin, href: "https://www.linkedin.com/company/yourcompany", label: "LinkedIn" },
+//   { icon: Instagram, href: "https://www.instagram.com/yourprofile", label: "Instagram" },
+// ]

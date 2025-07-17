@@ -41,7 +41,7 @@ const certifications = [
     icon: Microscope,
     title: "I.P. Grade",
     subtitle: "Indian Pharmacopoeia",
-    description: "Pharmaceutical-grade quality meeting Indian Pharmacopoeia specifications.",
+    description: "Sterilized pharma-grade cotton, rigorously tested to meet Indian Pharmacopoeia standards for superior purity and safety.",
     counter: 99,
     suffix: "%",
     colorScheme: {
