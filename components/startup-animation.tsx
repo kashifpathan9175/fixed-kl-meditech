@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { memo, useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
+import { memo, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export const StartupAnimation = memo(function StartupAnimation() {
-  const [showAnimation, setShowAnimation] = useState(true)
+  const [showAnimation, setShowAnimation] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowAnimation(false)
-    }, 2500)
+      setShowAnimation(false);
+    }, 2500);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -22,22 +22,16 @@ export const StartupAnimation = memo(function StartupAnimation() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="fixed inset-0 z-[9999] bg-gradient-to-br from-teal-50 via-blue-50 to-white flex items-center justify-center"
+          className="fixed inset-0 z-[9999] bg-gradient-to-br from-teal-50 via-blue-50 to-white flex items-center justify-center will-change-transform will-change-opacity will-change-transform will-change-opacity"
         >
           <div className="text-center">
             {/* Logo with Card Effect */}
             <motion.div
               initial={{
-                scale: 2.5,
-                opacity: 0,
-                filter: "blur(20px)",
-                y: -50,
+               opacity: 0, y: 30 
               }}
               animate={{
-                scale: 1,
-                opacity: 1,
-                filter: "blur(0px)",
-                y: 0,
+                 opacity: 1, y: 0
               }}
               transition={{
                 duration: 1.2,
@@ -46,10 +40,10 @@ export const StartupAnimation = memo(function StartupAnimation() {
                 stiffness: 100,
                 damping: 15,
               }}
-              className="relative mb-6"
+              className="relative mb-6 will-change-transform will-change-opacity"
             >
               <motion.div
-                className="relative w-24 h-24 mx-auto bg-white rounded-2xl shadow-2xl p-2"
+                className="relative w-24 h-24 mx-auto bg-white rounded-2xl shadow-2xl p-2 will-change-transform will-change-opacity"
                 initial={{ boxShadow: "0 0 0 0 rgba(20, 184, 166, 0)" }}
                 animate={{
                   boxShadow: [
@@ -69,8 +63,9 @@ export const StartupAnimation = memo(function StartupAnimation() {
                   src="/images/logo.jpg"
                   alt="K&L Meditech Industries LLP"
                   fill
-                  className="object-contain rounded-xl"
+                  className="object-contain rounded-xl will-change-transform will-change-opacity"
                   priority
+                   sizes="(max-width: 768px) 80vw, 120px"
                 />
               </motion.div>
             </motion.div>
@@ -85,7 +80,7 @@ export const StartupAnimation = memo(function StartupAnimation() {
                 K&L MEDITECH INDUSTRIES LLP
               </h1>
               <motion.p
-                className="text-slate-600 italic text-sm"
+                className="text-slate-600 italic text-sm will-change-transform will-change-opacity"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.6 }}
@@ -96,7 +91,7 @@ export const StartupAnimation = memo(function StartupAnimation() {
 
             {/* Progress Bar */}
             <motion.div
-              className="mt-6 w-48 h-1 bg-gray-200 rounded-full mx-auto overflow-hidden"
+              className="mt-6 w-48 h-1 bg-gray-200 rounded-full mx-auto overflow-hidden will-change-transform will-change-opacity will-change-transform will-change-opacity"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 0.3 }}
@@ -105,14 +100,14 @@ export const StartupAnimation = memo(function StartupAnimation() {
                 initial={{ width: 0 }}
                 animate={{ width: "100%" }}
                 transition={{ delay: 1.6, duration: 0.8, ease: "easeOut" }}
-                className="h-full bg-gradient-to-r from-teal-500 to-blue-500 rounded-full"
+                className="h-full bg-gradient-to-r from-teal-500 to-blue-500 rounded-full will-change-transform will-change-opacity will-change-transform will-change-opacity"
               />
             </motion.div>
           </div>
         </motion.div>
       )}
     </AnimatePresence>
-  )
-})
+  );
+});
 
-export default StartupAnimation
+export default StartupAnimation;

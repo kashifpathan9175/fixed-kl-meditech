@@ -127,7 +127,7 @@ export const ProductSection = memo(function ProductSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-gray-800 mb-4"
+            className="text-4xl font-bold text-gray-800 mb-4 will-change-transform will-change-opacity"
           >
             CottonCare Absorbent Cotton Roll
           </motion.h2>
@@ -136,7 +136,7 @@ export const ProductSection = memo(function ProductSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl text-blue-600 mb-2"
+            className="text-xl text-blue-600 mb-2 will-change-transform will-change-opacity"
           >
             Medical Grade • I.P. Standard • WHO-GMP Compliant • ISO 9001:2015 Compliant
 
@@ -146,7 +146,7 @@ export const ProductSection = memo(function ProductSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-gray-600 italic"
+            className="text-lg text-gray-600 italic will-change-transform will-change-opacity"
           >
             "Gentle Cotton, Genuine Care"
           </motion.p>
@@ -159,7 +159,7 @@ export const ProductSection = memo(function ProductSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="h-full flex justify-center items-center"
+            className="h-full flex justify-center items-center will-change-transform will-change-opacity"
           >
             <div className="relative bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 shadow-2xl flex justify-center items-center">
   <Image
@@ -167,7 +167,7 @@ export const ProductSection = memo(function ProductSection() {
     alt="CottonCare Absorbent Cotton Roll - 100g Package"
     width={350}     // ✅ Use fixed dimensions
     height={350}
-    className="object-contain rounded-lg"
+    className="object-contain rounded-lg will-change-transform will-change-opacity"
     priority
   />
   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-semibold text-blue-600">
@@ -183,7 +183,7 @@ export const ProductSection = memo(function ProductSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="h-full flex items-center"
+            className="h-full flex items-center will-change-transform will-change-opacity"
           >
             <div className="space-y-6">
               <div>
@@ -232,7 +232,7 @@ export const ProductSection = memo(function ProductSection() {
 
               <div className="flex gap-4">
                 <Button
-                  className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+                  className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2 will-change-transform will-change-opacity"
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href = "/brochures/kandlmeditech.pdf";
