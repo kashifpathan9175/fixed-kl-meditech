@@ -22,16 +22,18 @@ export const StartupAnimation = memo(function StartupAnimation() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="fixed inset-0 z-[9999] bg-gradient-to-br from-teal-50 via-blue-50 to-white flex items-center justify-center will-change-transform will-change-opacity will-change-transform will-change-opacity"
+          className="fixed inset-0 z-[9999] w-full max-w-screen overflow-hidden bg-gradient-to-br from-teal-50 via-blue-50 to-white flex items-center justify-center"
         >
           <div className="text-center">
             {/* Logo with Card Effect */}
             <motion.div
               initial={{
-               opacity: 0, y: 30 
+                opacity: 0,
+                y: 30,
               }}
               animate={{
-                 opacity: 1, y: 0
+                opacity: 1,
+                y: 0,
               }}
               transition={{
                 duration: 1.2,
@@ -43,7 +45,7 @@ export const StartupAnimation = memo(function StartupAnimation() {
               className="relative mb-6 will-change-transform will-change-opacity"
             >
               <motion.div
-                className="relative w-24 h-24 mx-auto bg-white rounded-2xl shadow-2xl p-2 will-change-transform will-change-opacity"
+                className="relative w-[30vw] h-[30vw] max-w-[6rem] max-h-[6rem] mx-auto bg-white rounded-2xl shadow-2xl p-2 will-change-transform will-change-opacity"
                 initial={{ boxShadow: "0 0 0 0 rgba(20, 184, 166, 0)" }}
                 animate={{
                   boxShadow: [
@@ -65,7 +67,7 @@ export const StartupAnimation = memo(function StartupAnimation() {
                   fill
                   className="object-contain rounded-xl will-change-transform will-change-opacity"
                   priority
-                   sizes="(max-width: 768px) 80vw, 120px"
+                  sizes="(max-width: 768px) 80vw, 120px"
                 />
               </motion.div>
             </motion.div>
