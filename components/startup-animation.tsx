@@ -22,7 +22,7 @@ export const StartupAnimation = memo(function StartupAnimation() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="fixed inset-0 z-[9999] w-full max-w-screen overflow-hidden bg-gradient-to-br from-teal-50 via-blue-50 to-white flex items-center justify-center"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-teal-50 via-blue-50 to-white overflow-hidden"
         >
           <div className="text-center">
             {/* Logo with Card Effect */}
@@ -45,7 +45,7 @@ export const StartupAnimation = memo(function StartupAnimation() {
               className="relative mb-6 will-change-transform will-change-opacity"
             >
               <motion.div
-                className="relative w-[30vw] h-[30vw] max-w-[6rem] max-h-[6rem] mx-auto bg-white rounded-2xl shadow-2xl p-2 will-change-transform will-change-opacity"
+                className="relative w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-2xl shadow-2xl p-2 mx-auto"
                 initial={{ boxShadow: "0 0 0 0 rgba(20, 184, 166, 0)" }}
                 animate={{
                   boxShadow: [
