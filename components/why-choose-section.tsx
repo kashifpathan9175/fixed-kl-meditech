@@ -32,7 +32,7 @@ export const WhyChooseSection = memo(function WhyChooseSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-bold mb-12"
+            className="text-4xl font-bold mb-12 will-change-transform will-change-opacity"
           >
             Why Choose Cotton Care?
           </motion.h2>
@@ -45,7 +45,7 @@ export const WhyChooseSection = memo(function WhyChooseSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center will-change-transform will-change-opacity"
               >
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <reason.icon className="w-8 h-8" />

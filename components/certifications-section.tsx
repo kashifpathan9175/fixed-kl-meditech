@@ -1,18 +1,29 @@
-"use client"
+"use client";
 
-import { memo } from "react"
-import type { Variants } from "framer-motion"
-import { motion } from "framer-motion"
-import { Shield, Award, CheckCircle2, Globe2, FileCheck, Microscope, Heart, Star, Zap } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { AnimatedCounter } from "./animated-counter"
+import { memo } from "react";
+import type { Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import {
+  Shield,
+  Award,
+  CheckCircle2,
+  Globe2,
+  FileCheck,
+  Microscope,
+  Heart,
+  Star,
+  Zap,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { AnimatedCounter } from "./animated-counter";
 
 const certifications = [
   {
     icon: Award,
     title: "ISO 9001:2015",
     subtitle: "Quality Management",
-    description: "International standard for quality management systems ensuring consistent excellence.",
+    description:
+      "International standard for quality management systems ensuring consistent excellence.",
     counter: 2015,
     colorScheme: {
       primary: "from-blue-500 to-indigo-600",
@@ -20,13 +31,18 @@ const certifications = [
       text: "text-blue-600",
       glow: "shadow-blue-500/25",
     },
-    features: ["Process Excellence", "Customer Focus", "Continuous Improvement"],
+    features: [
+      "Process Excellence",
+      "Customer Focus",
+      "Continuous Improvement",
+    ],
   },
   {
     icon: Shield,
     title: "WHO-GMP",
     subtitle: "Good Manufacturing Practices",
-    description: "World Health Organization certified manufacturing standards for pharmaceutical quality.",
+    description:
+      "World Health Organization certified manufacturing standards for pharmaceutical quality.",
     counter: 100,
     suffix: "%",
     colorScheme: {
@@ -41,7 +57,8 @@ const certifications = [
     icon: Microscope,
     title: "I.P. Grade",
     subtitle: "Indian Pharmacopoeia",
-    description: "Sterilized pharma-grade cotton, rigorously tested to meet Indian Pharmacopoeia standards for superior purity and safety.",
+    description:
+      "Sterilized pharma-grade cotton, rigorously tested to meet Indian Pharmacopoeia standards for superior purity and safety.",
     counter: 99,
     suffix: "%",
     colorScheme: {
@@ -52,7 +69,7 @@ const certifications = [
     },
     features: ["Medical Grade", "Purity Testing", "Safety Standards"],
   },
-]
+];
 
 const additionalBadges = [
   {
@@ -79,7 +96,7 @@ const additionalBadges = [
     color: "from-yellow-500 to-amber-500",
     glow: "shadow-yellow-500/20",
   },
-]
+];
 
 export const CertificationsSection = memo(function CertificationsSection() {
   const containerVariants = {
@@ -91,45 +108,38 @@ export const CertificationsSection = memo(function CertificationsSection() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const cardVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 60,
-    scale: 0.8,
-    rotateX: -15,
-  },
+    hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
-    rotateX: 0,
     transition: {
-      type: "spring", // ✅ Valid enum
-      stiffness: 100,
-      damping: 15,
+      type: "tween",
+      duration: 0.6,
+      ease: "easeOut",
     },
   },
-}
+  };
 
   const badgeVariants: Variants = {
-  hidden: { opacity: 0, scale: 0, rotate: -180 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    rotate: 0,
-    transition: {
-      duration: 0.6,
-      ease: "backOut", // ✅ valid easing string, NOT imported
+    hidden: { opacity: 0, scale: 0, rotate: -180 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.6,
+        ease: "backOut", // ✅ valid easing string, NOT imported
+      },
     },
-  },
-}
+  };
 
   return (
     <section
       id="certifications"
-      className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden"
+      className="py-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden will-change-transform will-change-opacity"
     >
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -138,24 +148,27 @@ export const CertificationsSection = memo(function CertificationsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 will-change-transform will-change-opacity"
         >
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-6 py-2 mb-6"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-6 py-2 mb-6 will-change-transform will-change-opacity"
           >
             <Zap className="w-5 h-5 text-blue-600" />
-            <span className="text-sm font-semibold text-slate-700">World-Class Certifications</span>
+            <span className="text-sm font-semibold text-slate-700">
+              World-Class Certifications
+            </span>
           </motion.div>
 
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-slate-800 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
             Quality Standards & Certifications
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Validated excellence through international certifications and rigorous quality standards
+            Validated excellence through international certifications and
+            rigorous quality standards
           </p>
         </motion.div>
 
@@ -164,21 +177,29 @@ export const CertificationsSection = memo(function CertificationsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-3 gap-8 mb-16"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16 will-change-transform will-change-opacity"
         >
           {certifications.map((cert, index) => (
-            <motion.div key={cert.title} variants={cardVariants} className="group">
+            <motion.div
+              key={cert.title}
+              variants={cardVariants}
+              className="group will-change-transform will-change-opacity"
+            >
               <Card
                 className={`relative overflow-hidden border-0 bg-white/70 backdrop-blur-sm hover:bg-white/90 transition-all duration-500 hover:shadow-2xl ${cert.colorScheme.glow} hover:shadow-2xl`}
               >
                 {/* Gradient Border */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${cert.colorScheme.primary} p-[2px] rounded-xl`}>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${cert.colorScheme.primary} p-[2px] rounded-xl`}
+                >
                   <div className="bg-white rounded-[10px] h-full w-full" />
                 </div>
 
                 {/* Background Pattern */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${cert.colorScheme.bg} opacity-30`} />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${cert.colorScheme.bg} opacity-30`}
+                />
 
                 <CardContent className="relative p-6 text-center">
                   {/* Icon */}
@@ -191,18 +212,29 @@ export const CertificationsSection = memo(function CertificationsSection() {
                   </motion.div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-slate-800 mb-1">{cert.title}</h3>
-                  <p className={`text-sm font-medium ${cert.colorScheme.text} mb-3`}>{cert.subtitle}</p>
+                  <h3 className="text-xl font-bold text-slate-800 mb-1">
+                    {cert.title}
+                  </h3>
+                  <p
+                    className={`text-sm font-medium ${cert.colorScheme.text} mb-3`}
+                  >
+                    {cert.subtitle}
+                  </p>
 
                   {/* Counter */}
                   <div
                     className={`text-3xl font-bold bg-gradient-to-r ${cert.colorScheme.primary} bg-clip-text text-transparent mb-4`}
                   >
-                    <AnimatedCounter end={cert.counter} suffix={cert.suffix || ""} />
+                    <AnimatedCounter
+                      end={cert.counter}
+                      suffix={cert.suffix || ""}
+                    />
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">{cert.description}</p>
+                  <p className="text-sm text-slate-600 mb-4 leading-relaxed">
+                    {cert.description}
+                  </p>
 
                   {/* Features */}
                   <div className="space-y-2">
@@ -213,9 +245,11 @@ export const CertificationsSection = memo(function CertificationsSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.3 + idx * 0.1 }}
-                        className="flex items-center justify-center text-xs text-slate-600"
+                        className="flex items-center justify-center text-xs text-slate-600 will-change-transform will-change-opacity"
                       >
-                        <CheckCircle2 className={`w-3 h-3 ${cert.colorScheme.text} mr-2`} />
+                        <CheckCircle2
+                          className={`w-3 h-3 ${cert.colorScheme.text} mr-2`}
+                        />
                         {feature}
                       </motion.div>
                     ))}
@@ -237,9 +271,11 @@ export const CertificationsSection = memo(function CertificationsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center"
+          className="text-center will-change-transform will-change-opacity"
         >
-          <h3 className="text-xl font-bold text-slate-800 mb-8">Additional Quality Assurances</h3>
+          <h3 className="text-xl font-bold text-slate-800 mb-8">
+            Additional Quality Assurances
+          </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {additionalBadges.map((badge, index) => (
               <motion.div
@@ -250,7 +286,7 @@ export const CertificationsSection = memo(function CertificationsSection() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -2 }}
-                className="group"
+                className="group will-change-transform will-change-opacity"
               >
                 <div
                   className={`relative bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:shadow-xl ${badge.glow} hover:shadow-xl transition-all duration-300 border border-white/20`}
@@ -260,7 +296,9 @@ export const CertificationsSection = memo(function CertificationsSection() {
                   >
                     <badge.icon className="w-6 h-6 text-white" />
                   </div>
-                  <p className="text-sm font-semibold text-slate-700">{badge.title}</p>
+                  <p className="text-sm font-semibold text-slate-700">
+                    {badge.title}
+                  </p>
 
                   {/* Subtle glow on hover */}
                   <div
@@ -278,15 +316,17 @@ export const CertificationsSection = memo(function CertificationsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          className="text-center mt-12 will-change-transform will-change-opacity"
         >
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-full px-6 py-3 border border-green-200/50">
             <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-green-700">Trusted by 500+ Healthcare Facilities Nationwide</span>
+            <span className="text-sm font-medium text-green-700">
+              Trusted by 500+ Healthcare Facilities Nationwide
+            </span>
           </div>
         </motion.div>
       </div>
     </section>
-  )
-})
-export default CertificationsSection
+  );
+});
+export default CertificationsSection;

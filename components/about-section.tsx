@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { memo } from "react"
-import { motion } from "framer-motion"
-import { MapPin, Shield, Star } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { memo } from "react";
+import { motion } from "framer-motion";
+import { MapPin, Shield, Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const cardData = [
   {
@@ -19,9 +19,10 @@ const cardData = [
   {
     icon: Star,
     title: "Our Motto",
-    description: '"Gentle Cotton, Genuine Care" - Quality and patient well-being',
+    description:
+      '"Gentle Cotton, Genuine Care" - Quality and patient well-being',
   },
-]
+];
 
 export const AboutSection = memo(function AboutSection() {
   return (
@@ -33,34 +34,38 @@ export const AboutSection = memo(function AboutSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-bold text-gray-800 mb-8"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 will-change-transform will-change-opacity"
           >
             About K&L MEDITECH INDUSTRIES LLP
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-gray-600 mb-8 leading-relaxed"
+            className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed px-2 sm:px-0 will-change-transform will-change-opacity"
           >
-            K&L MEDITECH INDUSTRIES LLP is a leading manufacturer of "COTTON CARE" premium absorbent cotton
-            wool rolls. Strategically located in the MIDC Industrial Area, Butibori, Nagpur, Maharashtra, we are
-            committed to delivering medical-grade products that meet stringent international standards.
+            K&L MEDITECH INDUSTRIES LLP is a leading manufacturer of "COTTON
+            CARE" premium absorbent cotton wool rolls. Strategically located in
+            the MIDC Industrial Area, Butibori, Nagpur, Maharashtra, we are
+            committed to delivering medical-grade products that meet stringent
+            international standards.
           </motion.p>
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
             {cardData.map((card, index) => (
               <motion.div
                 key={card.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, amount: 0.2  }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
               >
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-8 text-center">
                     <card.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                    <h3 className="font-semibold text-gray-800 mb-2">{card.title}</h3>
+                    <h3 className="font-semibold text-gray-800 mb-2">
+                      {card.title}
+                    </h3>
                     <p className="text-gray-600">{card.description}</p>
                   </CardContent>
                 </Card>
@@ -70,7 +75,7 @@ export const AboutSection = memo(function AboutSection() {
         </div>
       </div>
     </section>
-  )
-})
+  );
+});
 
-export default AboutSection
+export default AboutSection;

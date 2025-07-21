@@ -36,7 +36,7 @@ export const UseCasesSection = memo(function UseCasesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-gray-800 text-center mb-12"
+          className="text-4xl font-bold text-gray-800 text-center mb-12 will-change-transform will-change-opacity"
         >
           Where Our Products Are Used
         </motion.h2>
@@ -49,7 +49,7 @@ export const UseCasesSection = memo(function UseCasesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-white rounded-lg p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-lg p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 will-change-transform will-change-opacity"
             >
               <useCase.icon className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="font-semibold text-gray-800 mb-2">{useCase.title}</h3>
