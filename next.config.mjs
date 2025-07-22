@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -9,6 +10,21 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'klmeditechindustries.com',
+          },
+        ],
+        destination: 'https://www.klmeditechindustries.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
+};
 
-export default nextConfig
+export default nextConfig;
