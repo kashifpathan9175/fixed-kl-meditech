@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'KL Meditech',
   description: 'Leading provider of medical technology solutions',
   generator: 'Next.js',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({

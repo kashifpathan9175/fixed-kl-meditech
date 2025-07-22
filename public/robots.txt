@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Sitemap: https://www.klmeditechindustries.com/sitemap.xml
+
+# Host
+Host: https://klmeditechindustries.com
+
+# Sitemaps
+Sitemap: https://klmeditechindustries.com/sitemap.xml
