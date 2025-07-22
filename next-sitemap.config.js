@@ -1,7 +1,7 @@
 // next-sitemap.config.js
 
 module.exports = {
-  siteUrl: 'http://localhost:3000', // Use localhost until deployed
+  siteUrl:  process.env.NEXT_PUBLIC_SITE_URL || 'https://klmeditechindustries.com', // Use localhost until deployed
   generateRobotsTxt: true,
   changefreq: 'weekly',
   priority: 0.7,
