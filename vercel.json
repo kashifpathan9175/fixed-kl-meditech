@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "klmeditechindustries.com"
+        }
+      ],
+      "destination": "https://www.klmeditechindustries.com/:path*",
+      "permanent": true
+    }
+  ]
+}
