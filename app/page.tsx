@@ -35,10 +35,8 @@ export default function KLMeditechWebsite() {
       <Head>
         <title>Surgical Cotton Rolls | K&L Meditech Industries LLP</title>
 
-        {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.png" type="image/png" />
 
-        {/* ✅ Meta Tags */}
         <meta
           name="description"
           content="Sterilized surgical cotton rolls – IP-certified, ISO 9001:2015 & WHO-GMP compliant. Medical-grade quality from K&L Meditech Industries LLP."
