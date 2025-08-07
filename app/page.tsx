@@ -35,7 +35,7 @@ export default function KLMeditechWebsite() {
       <Head>
         <title>Surgical Cotton Rolls | K&L Meditech Industries LLP</title>
 
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta
           name="description"
